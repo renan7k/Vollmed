@@ -8,7 +8,9 @@
     "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:browser:edge": "cypress run --browser edge",
-    "test:tablet": "cypress run --config viewportWidth=768 viewportHeight=1024"
+    "test:tablet": "cypress run --config viewportWidth=768 viewportHeight=1024",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "keywords": [],
   "author": "",
