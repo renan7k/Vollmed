@@ -7,6 +7,6 @@ describe('Página de Login', () => {
     })
     it('Digita email e senha corretos para efetuar o login', () => {
         cy.login(Cypress.env('email'), Cypress.env('senha'))
-
+        cy.url().should('eq', 'http://localhost:3000/dashboard');
     })
 })
