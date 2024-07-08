@@ -4,13 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint cypress/**/*.js && eslint cypress.config.js",
+    "lint:fix": "eslint cypress/**/*.js --fix && eslint cypress.config.js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:browser:edge": "cypress run --browser edge",
+    "test:tablet": "cypress run --config viewportWidth=768 viewportHeight=1024"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.7.2",
+    "eslint": "^9.6.0",
+    "eslint-plugin-cypress": "^3.3.0",
+    "globals": "^15.8.0",
     "mochawesome": "^7.1.3"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.1"
   }
 }
